@@ -1,0 +1,21 @@
+{
+  "name": "botium-samples-nlpanalytics",
+  "version": "1.0.0",
+  "description": "Botium Sample Repository for doing NLP Analytics",
+  "scripts": {
+    "nlpextract:watson": "botium-cli nlpextract --config ./config/watson.botium.json --convos ./convos --verbose",
+    "nlpextract:lex": "botium-cli nlpextract --config ./config/lex.botium.json --convos ./convos --verbose",
+    "nlpextract:witai": "botium-cli nlpextract --config ./config/witai.botium.json --convos ./convos --verbose",
+    "nlpextract:dialogflow": "botium-cli nlpextract --config ./config/dialogflow.botium.json --convos ./convos --verbose",
+    "nlpanalytics:watson": "botium-cli nlpanalytics k-fold -k 5 --config ./config/watson.botium.json --convos ./convos --output ./results/k-fold-watson.csv > ./results/k-fold-watson.txt 2> ./results/k-fold-watson.err.txt",
+    "nlpanalytics:lex": "botium-cli nlpanalytics k-fold -k 5 --config ./config/lex.botium.json --convos ./convos --output ./results/k-fold-lex.csv > ./results/k-fold-lex.txt 2> ./results/k-fold-lex.err.txt",
+    "nlpanalytics:witai": "botium-cli nlpanalytics k-fold -k 5 --config ./config/witai.botium.json --convos ./convos --output ./results/k-fold-witai.csv > ./results/k-fold-witai.txt 2> ./results/k-fold-witai.err.txt",
+    "nlpanalytics:dialogflow": "botium-cli nlpanalytics k-fold -k 5 --config ./config/dialogflow.botium.json --convos ./convos --output ./results/k-fold-dialogflow.csv > ./results/k-fold-dialogflow.txt 2> ./results/k-fold-dialogflow.err.txt",
+    "nlpanalytics:nlpjs": "botium-cli nlpanalytics k-fold -k 5 --config ./config/nlpjs.botium.json --convos ./convos --output ./results/k-fold-nlpjs.csv > ./results/k-fold-nlpjs.txt 2> ./results/k-fold-nlpjs.err.txt",
+    "nlpanalytics": "run-p -c nlpanalytics:watson nlpanalytics:lex nlpanalytics:witai nlpanalytics:dialogflow nlpanalytics:nlpjs"
+  },
+  "dependencies": {
+    "botium-cli": "0.0.62",
+    "npm-run-all": "^4.1.5"
+  }
+}

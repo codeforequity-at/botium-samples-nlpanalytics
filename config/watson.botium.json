@@ -1,0 +1,10 @@
+{
+    "botium": {
+        "Capabilities": {
+            "PROJECTNAME": "Botium NLPAnalytics Watson",
+            "CONTAINERMODE": "watson",
+            "WATSON_APIKEY": "...",
+            "WATSON_WORKSPACE_ID": "..."
+        }
+    }
+}

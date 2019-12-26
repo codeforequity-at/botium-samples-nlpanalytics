@@ -1,0 +1,17 @@
+{
+    "botium": {
+        "Capabilities": {
+            "PROJECTNAME": "Botium NLPAnalytics Dialoflow",
+            "CONTAINERMODE": "dialogflow",
+            "RATELIMIT_USERSAYS_MINTIME": 1000,
+            "RATELIMIT_USERSAYS_MAXCONCURRENT": 1,
+            "DIALOGFLOW_PROJECT_ID": "...",
+            "DIALOGFLOW_CLIENT_EMAIL": "...",
+            "DIALOGFLOW_PRIVATE_KEY": "...",
+            "DIALOGFLOW_OUTPUT_PLATFORM": "...",
+            "DIALOGFLOW_NLP_PROJECT_ID": "...",
+            "DIALOGFLOW_NLP_CLIENT_EMAIL": "...",
+            "DIALOGFLOW_NLP_PRIVATE_KEY": "..."
+        }
+    }
+}

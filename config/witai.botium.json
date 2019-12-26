@@ -1,0 +1,10 @@
+{
+    "botium": {
+        "Capabilities": {
+            "PROJECTNAME": "Botium NLPAnalytics wit.ai",
+            "CONTAINERMODE": "witai",
+            "WITAI_TOKEN": "...",
+            "WITAI_LANG": "en"
+        }
+    }
+}
