@@ -21,15 +21,15 @@ See https://github.com/codeforequity-at/botium-connector-witai
 
 _Trained Wit.ai projects cannot be removed automatically, have to be done manually_
 
-## Dialogflow
+### Dialogflow
 See https://github.com/codeforequity-at/botium-connector-dialogflow
 
 _Create a separated Google Project for doing this analytics. The attached Dialogflow agent will be overwritten._
 
-## NLP.js
+### NLP.js
 See https://github.com/codeforequity-at/botium-connector-nlpjs
 
-## Lex
+### Lex
 See https://github.com/codeforequity-at/botium-connector-lex
 
 ## Prepare Data
@@ -55,7 +55,28 @@ It makes sense to use your own data to make this evaluation. If you already have
 
 An easy way to separate training data from test data is to split an existing dataset into two separate datasets. In package.json, there is a sample task splitting the _Smalltalk_ into 80% training data and 20% test data:
 
-    > npm run nlpslit
+    > npm run nlpsplit
+
+## Run Test Set Validation on Training Set
+
+When you separated your test data into a training and a test set, either manually or by using the _nlpsplit_ task, you can now train a model with the training set and validate with the test set. In package.json, there are tasks defined to run the validation for the included _Smalltalk_ dataset.
+
+    > npm run validate:watson
+    > npm run validate:lex
+    > npm run validate:witai
+    > npm run validate:dialogflow
+    > npm run validate:nlpjs
+
+Or you can run it all in parallel:
+
+    > npm run validate
+
+After a while, you will find the results for each platform in the _results_ directory. For each platform:
+
+* validate-_platform_.txt to hold the validation summary
+* validate-_platform_.err.txt for processing error output
+* validate-_platform_.csv for listing the score details
+* validate-_platform_-predictions.csv for listing the predicted intents for all utterances
 
 ## Run K-Fold Cross Validation
 
@@ -69,7 +90,7 @@ In package.json, there are tasks defined to run the K-Fold Cross Validation for 
 
 Or you can run it all in parallel:
 
-    > npm run kfold:all
+    > npm run kfold
 
 After a while, you will find the results for each platform in the _results_ directory. For each platform:
 
