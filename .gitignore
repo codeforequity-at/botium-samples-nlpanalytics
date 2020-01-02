@@ -107,3 +107,5 @@ package-lock.json
 *.local.json
 results/*.csv
 results/*.txt
+convos/smalltalk-test
+convos/smalltalk-train

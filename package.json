@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Botium Sample Repository for doing NLP Analytics",
   "scripts": {
+    "nlpsplit": "botium-cli nlpsplit --convos ./convos/smalltalk --test ./convos/smalltalk-test --train ./convos/smalltalk-train --percentage 20 --verbose",
     "nlpextract:watson": "botium-cli nlpextract --config ./config/watson.botium.json --convos ./convos --verbose",
     "nlpextract:lex": "botium-cli nlpextract --config ./config/lex.botium.json --convos ./convos --verbose",
     "nlpextract:witai": "botium-cli nlpextract --config ./config/witai.botium.json --convos ./convos --verbose",

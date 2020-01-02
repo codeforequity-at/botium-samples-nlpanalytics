@@ -51,6 +51,12 @@ It makes sense to use your own data to make this evaluation. If you already have
 
 **You are free to use any other tool to prepare the data, you can even write it manually (if you have the time)**
 
+## Split utterances into a training and a test set
+
+An easy way to separate training data from test data is to split an existing dataset into two separate datasets. In package.json, there is a sample task splitting the _Smalltalk_ into 80% training data and 20% test data:
+
+    > npm run nlpslit
+
 ## Run K-Fold Cross Validation
 
 In package.json, there are tasks defined to run the K-Fold Cross Validation for the included _Smalltalk_ dataset.
