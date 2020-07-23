@@ -4,10 +4,10 @@
   "description": "Botium Sample Repository for doing NLP Analytics",
   "scripts": {
     "nlpsplit": "botium-cli nlpsplit --convos ./convos/smalltalk --test ./convos/smalltalk-test --train ./convos/smalltalk-train --percentage 20 --verbose",
-    "nlpextract:watson": "botium-cli nlpextract --config ./config/watson.botium.json --convos ./convos --verbose",
-    "nlpextract:lex": "botium-cli nlpextract --config ./config/lex.botium.json --convos ./convos --verbose",
-    "nlpextract:witai": "botium-cli nlpextract --config ./config/witai.botium.json --convos ./convos --verbose",
-    "nlpextract:dialogflow": "botium-cli nlpextract --config ./config/dialogflow.botium.json --convos ./convos --verbose",
+    "nlpextract:watson": "DEBUG=botium* botium-cli nlpextract --config ./config/watson.botium.json --convos ./convos",
+    "nlpextract:lex": "DEBUG=botium* botium-cli nlpextract --config ./config/lex.botium.json --convos ./convos",
+    "nlpextract:witai": "DEBUG=botium* botium-cli nlpextract --config ./config/witai.botium.json --convos ./convos",
+    "nlpextract:dialogflow": "DEBUG=botium* botium-cli nlpextract --config ./config/dialogflow.botium.json --convos ./convos",
     "validate:watson": "botium-cli nlpanalytics validate --config ./config/watson.botium.json --train ./convos/smalltalk-train --test ./convos/smalltalk-test --output ./results/validate-watson.csv --outputPredictions ./results/validate-watson-predictions.csv > ./results/validate-watson.txt 2> ./results/validate-watson.err.txt",
     "validate:lex": "botium-cli nlpanalytics validate --config ./config/lex.botium.json --train ./convos/smalltalk-train --test ./convos/smalltalk-test --output ./results/validate-lex.csv --outputPredictions ./results/validate-lex-predictions.csv > ./results/validate-lex.txt 2> ./results/validate-lex.err.txt",
     "validate:witai": "botium-cli nlpanalytics validate --config ./config/witai.botium.json --train ./convos/smalltalk-train --test ./convos/smalltalk-test --output ./results/validate-witai.csv --outputPredictions ./results/validate-witai-predictions.csv > ./results/validate-witai.txt 2> ./results/validate-witai.err.txt",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "botium-cli": "latest",
+    "botium-connector-dialogflow": "github:codeforequity-at/botium-connector-dialogflow#master",
     "npm-run-all": "^4.1.5"
   }
 }
