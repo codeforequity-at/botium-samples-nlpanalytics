@@ -23,7 +23,11 @@
   },
   "dependencies": {
     "botium-cli": "latest",
-    "botium-connector-dialogflow": "github:codeforequity-at/botium-connector-dialogflow#master",
+    "botium-connector-watson": "latest",
+    "botium-connector-lex": "latest",
+    "botium-connector-witai": "latest",
+    "botium-connector-dialogflow": "latest",
+    "botium-connector-nlpjs": "latest",
     "npm-run-all": "^4.1.5"
   }
 }
