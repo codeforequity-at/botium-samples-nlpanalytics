@@ -6,6 +6,7 @@ This repository is accompanying [this blog article](https://chatbotslife.com/tut
 
 * Node.js (> 8.13)
 * Clone this repository (_git clone ..._)
+* Run _npm install_ to install dependencies
 
 ## Prepare Botium Connectors
 
